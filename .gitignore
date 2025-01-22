@@ -25,3 +25,6 @@ replay_pid*
 
 #evitar tener el la carpeta .idea/
 .idea/
+
+# Ignorar archivos de configuración
+config.properties
