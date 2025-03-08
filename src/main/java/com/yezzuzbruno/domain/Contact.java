@@ -40,4 +40,65 @@ public class Contact {
     public int hashCode() {
         return Objects.hash(id, name, age, telephone, ocuppation, dateAdded);
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getOcuppation() {
+        return ocuppation;
+    }
+
+    public void setOcuppation(String ocuppation) {
+        this.ocuppation = ocuppation;
+    }
+
+    public String getDateAdded() {
+        return dateAdded;
+    }
+
+    public void setDateAdded(String dateAdded) {
+        this.dateAdded = dateAdded;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Contact{");
+        sb.append("id=").append(id);
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", age=").append(age);
+        sb.append(", telephone='").append(telephone).append('\'');
+        sb.append(", ocuppation='").append(ocuppation).append('\'');
+        sb.append(", dateAdded='").append(dateAdded).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

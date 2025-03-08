@@ -31,19 +31,18 @@ public class Conexion {
         Connection conexion = null;
         try{
             conexion = DriverManager.getConnection(URL, USER, PASSWORD);
-            conexion.close();
         }catch (SQLException e){
             System.out.println("Error: "+ e.getMessage());
         }
         return conexion;
     }
 
-    public static void main(String[] args) {
-        Connection connection = Conexion.getConexion();
-        if(connection != null){
-            System.out.println("The connection with database was successfully:" + connection);
-        }else{
-            System.out.println("Error: Could not connect to the database.");
+    public static void closeConexion(Connection connection){
+        try{
+            connection.close();
+            System.out.println("The database has been closed successfully!");
+        }catch (SQLException e){
+            System.out.println("Error closing the database" + e.getMessage());
         }
     }
 }
